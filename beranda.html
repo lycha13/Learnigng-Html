@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beranda</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(163, 245, 245);
+    color: black;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: rgb(163, 245, 245);
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    font-weight: auto;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+section {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+
+        @media (max-width: 768px) {
+            .hero-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header img {
+                width: 250px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            header img {
+                width: 180px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            input, textarea {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1 style="color: orang;">Sudut Nongkrong by Dhita</h1>
+
+    <nav>
+        <a href="beranda.html">Beranda</a> |
+        <a href="galery.html">Galeri Menu</a> |
+        <a href="formulir.html">Form Pemesanan</a>
+    </nav>
+
+    <img src="logo_sudutnongkrong.png" alt="Logo Sudut Nongkrong" width="400">
+
+</header>
+
+<main>
+
+<section>
+    <article>
+        <h1>Tentang Kami</h1>
+    <p>
+        Sudut Nongkrong by Dhita adalah tempat santai yang menyediakan berbagai makanan dan minuman untuk dinikmati dari pagi hingga malam. 
+        Dengan suasana hangat dan harga terjangkau, kami siap menemani waktu santai Anda. Berlokasi di Jl. Mawar No. 12, Kebalen Krajan Satu, kami menyajikan berbagai hidangan mulai dari makanan ringan, hidangan utama, hingga aneka minuman segar.
+    </p>
+
+    <h3>Fasilitas dan Layanan Kami:</h3>
+    <ol>
+        <li>Tempat yang nyaman untuk bersantai bersama teman atau keluarga.</li>
+        <li>Buka setiap hari dari pukul 07.00 hingga 23.50 WITA.</li>
+        <li>Tersedia area untuk makan di tempat dan pemesanan.</li>
+        <li>Daftar menu bervariasi dengan harga yang sangat terjangkau.</li>
+    </ol>
+    </article>
+</section>
+
+<section>
+    <table>
+        <caption>Menu Makanan & Minuman</caption>
+
+        <tr>
+            <th>Kategori Makanan</th>
+            <th>Harga</th>
+            <th>Kategori Minuman</th>
+            <th>Harga</th>
+        </tr>
+
+        <tr>
+            <td>Nasi Uduk + Telur</td>
+            <td>5K - 6K</td>
+            <td>Es Teh</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Nasi Kuning</td>
+            <td>5K</td>
+            <td>Es Jeruk</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Nasi Goreng</td>
+            <td>10K</td>
+            <td>Kopi Hitam</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Mie Instan / Spesial + Telur</td>
+            <td>10K</td>
+            <td>Kopi Susu</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Ayam Goreng + Nasi</td>
+            <td>10K</td>
+            <td>Teh Tarik</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Ayam Geprek</td>
+            <td>10K</td>
+            <td>Milo Es/Hangat</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Seblak</td>
+            <td>12K</td>
+            <td>Es Coklat</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Nasi + Sosis/Nugget</td>
+            <td>12K</td>
+            <td>Es Susu</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Sandwich Telur/Ayam/Sosis</td>
+            <td>8K</td>
+            <td>Matcha Latte</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Burger Mini</td>
+            <td>6K</td>
+            <td>Milk Tea</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Sosis Bakar</td>
+            <td>8K</td>
+            <td>Nutrisari</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Kentang Goreng</td>
+            <td>10K</td>
+            <td>Air Mineral</td>
+            <td>3K</td>
+        </tr>
+
+    </table>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sudut Nongkrong by Dhita</p>
+</footer>
+
+</body>
+</html>>

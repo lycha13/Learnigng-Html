@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(163, 245, 245);
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: rgb(163, 245, 245);
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    font-weight: auto;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery figure {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.gallery figure:hover {
+    transform: translateY(-8px);
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+        @media (max-width: 768px) {
+            .hero-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header img {
+                width: 250px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            header img {
+                width: 180px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            input, textarea {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+</style>
+
+</head>
+
+<body>
+
+    <header>
+    <h1>Sudut Nongkrong by Dhita</h1>
+
+    <nav>
+        <a href="beranda.html">Beranda</a> |
+        <a href="galery.html">Galeri Menu</a> |
+        <a href="formulir.html">Form Pemesanan</a>
+    </nav>
+
+    <img src="logo_sudutnongkrong.png" alt="Logo Sudut Nongkrong" width="400">
+
+</header>
+
+<main>
+
+<h1>Galeri Menu</h1>
+
+<section class="gallery">
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/c5/6a/ca/c56acabe0c71e3e492129196b239133e.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/c5/6a/ca/c56acabe0c71e3e492129196b239133e.jpg" alt="Aneka Makanan Kekinian" title="Matcha Latte">
+        </a>
+        <figcaption>Aneka Minuman Kekinian</figcaption>
+    </figure>
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/0a/7c/27/0a7c27f56aa886c3451e4cf97bc37e57.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/0a/7c/27/0a7c27f56aa886c3451e4cf97bc37e57.jpg" alt="Minuman Segar" title="Es Teh">
+        </a>
+        <figcaption>Minuman Segar</figcaption>
+    </figure>
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/68/79/35/68793579baff1601c623e01b4ad994a3.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/68/79/35/68793579baff1601c623e01b4ad994a3.jpg" alt="Makanan Lokal" title="Mie Dower">
+        </a>
+        <figcaption>Aneka Makanan Kekinian</figcaption>
+    </figure>
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/38/9c/04/389c0424778f3e3f0ebaf0f118f87718.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/38/9c/04/389c0424778f3e3f0ebaf0f118f87718.jpg" alt="Suasana Cafe" title="Lalapan">
+        </a>
+        <figcaption>Aneka Makanan Lokal</figcaption>
+    </figure>
+
+        <figure>
+        <a href="https://i.pinimg.com/736x/8d/a0/d6/8da0d650a53456c2d461ea0f3f8a7228.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/8d/a0/d6/8da0d650a53456c2d461ea0f3f8a7228.jpg" alt="Suasana Cafe" title="Menu Sarapan">
+        </a>
+        <figcaption>BreakFast</figcaption>
+    </figure>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sudut Nongkrong by Dhita</p>
+</footer>
+    
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulir</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(163, 245, 245);
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: rgb(163, 245, 245);
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    font-weight: auto;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+fieldset {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inline-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+        @media (max-width: 768px) {
+            .hero-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header img {
+                width: 250px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            header img {
+                width: 180px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            input, textarea {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+</style>
+
+</head>
+
+<body>
+
+    <header>
+    <h1>Sudut Nongkrong by Dhita</h1>
+
+    <nav>
+        <a href="beranda.html">Beranda</a> |
+        <a href="galery.html">Galeri Menu</a> |
+        <a href="formulir.html">Form Pemesanan</a>
+    </nav>
+
+    <img src="logo_sudutnongkrong.png" alt="Logo Sudut Nongkrong" width="400">
+
+</header>
+
+<main>
+
+<h1>Informasi Pemesanan / Reservasi</h1>
+
+<form action="#" onsubmit="alert('Pesanan berhasil dikirim!'); return false;">
+    <fieldset>
+        <legend><h1>Form Reservasi</h1></legend>
+        <div class="form-group">
+            <label for="nama">Nama Pemesan:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email">
+        </div>
+
+        <div class="form-group">
+            <label>Jenis Kelamin Pemesan:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+            <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+        </div>
+    </div>
+
+        <div class="form-group">
+            <label for="waktu">Tanggal dan Waktu Kunjungan:</label>
+            <input type="datetime-local" name="waktu" id="waktu">
+        </div>
+
+        <div class="form-group">
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" pattern="[0-9]{10,13}" placeholder="Masukkan No.Hp">
+        </div>
+
+        <div class="form-group">
+            <label>Pilihan Tempat Duduk:</label>
+            <div class="radio-group">
+                <div class="inline-group">
+                    <input type="radio" id="indoor" name="tempat" value="indoor">
+                    <label for="indoor">Indoor</label>
+                </div>
+                <div class="inline-group">
+                    <input type="radio" id="outdoor" name="tempat" value="outdoor">
+                    <label for="outdoor">Outdoor</label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend><h1>Pesanan Utama</h1></legend>
+
+        <div class="form-group">
+            <label>Pilih Kategori Pesanan:</label>
+            <div class="checkbox-group">                
+                <div>
+                    <input type="checkbox" name="menu" id="menu-matcha" value="Matcha">
+                    <label for="menu-matcha">BreakFast</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="menu" id="menu-nasduk" value="Nasi Uduk">
+                    <label for="menu-nasduk">Makanan Kekinian</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="menu" id="menu-goreng" value="Nasi Goreng">
+                    <label for="menu-goreng">Makanan Lokal</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="menu" id="menu-seblak" value="Seblak">
+                    <label for="menu-seblak">Minuman Kekinian</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="menu" id="menu-kopi" value="Kopi Susu">
+                    <label for="menu-kopi">Minuman Segar</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gambar">Upload Bukti Transaksi / Catatan:</label>
+            <input type="file" name="gambar" id="gambar" accept="image/*">
+        </div>
+
+        <h2>Catatan Tambahan</h2>
+        <div class="form-group">
+            <textarea rows="5" cols="40" placeholder="Tuliskan catatan tambahan seperti request khusus..."></textarea>
+        </div>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+    </fieldset>
+</form>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sudut Nongkrong by Dhita</p>
+</footer>
+    
+</body>
+</html>

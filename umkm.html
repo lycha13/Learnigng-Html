@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas UTS Desain Web - Sudut Nongkrong</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(163, 245, 245);
+            background-size: cover;
+            background-attachment: fixed;
+            color: black;
+        }
+
+        header {
+            padding: 20px;
+            background:  rgb(163, 245, 245);;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        nav a {
+        text-decoration: none;
+        margin: 20px;
+        color: black;
+        font-weight: auto;
+        }
+
+        nav a:hover {
+            color: blue;
+        }
+
+        fieldset {
+            border: 2px solid black;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        header img {
+            display: block;
+            margin: 10px auto 0 auto;
+        }
+
+        .hero-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .hero-container picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        caption {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: green;
+            color: white;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .gallery-container img,
+        .gallery-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .gallery-desc {
+            margin-top: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .gallery figure {
+            margin: 0;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .gallery figure:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .inline-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header img {
+                width: 250px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            header img {
+                width: 180px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            input, textarea {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- BERANDA -->
+
+<header>
+    <h1>Sudut Nongkrong by Dhita</h1>
+
+    <nav>
+        <a href="beranda.html">Beranda</a> |
+        <a href="galery.html">Galeri Menu</a> |
+        <a href="formulir.html">Form Pemesanan</a>
+    </nav>
+
+    <img src="logo_sudutnongkrong.png" alt="Logo Sudut Nongkrong" width="400">
+
+</header>
+
+<main>
+
+<section>
+    <article>
+        <h1>Tentang Kami</h1>
+    <p>
+        Sudut Nongkrong by Dhita adalah tempat santai yang menyediakan berbagai makanan dan minuman untuk dinikmati dari pagi hingga malam. 
+        Dengan suasana hangat dan harga terjangkau, kami siap menemani waktu santai Anda. Berlokasi di Jl. Mawar No. 12, Kebalen Krajan Satu, kami menyajikan berbagai hidangan mulai dari makanan ringan, hidangan utama, hingga aneka minuman segar.
+    </p>
+
+    <h3>Fasilitas dan Layanan Kami:</h3>
+    <ol>
+        <li>Tempat yang nyaman untuk bersantai bersama teman atau keluarga.</li>
+        <li>Buka setiap hari dari pukul 07.00 hingga 23.50 WITA.</li>
+        <li>Tersedia area untuk makan di tempat dan pemesanan.</li>
+        <li>Daftar menu bervariasi dengan harga yang sangat terjangkau.</li>
+    </ol>
+    </article>
+</section>
+
+<section>
+    <table border="1">
+        <caption>Menu Makanan & Minuman</caption>
+
+        <tr>
+            <th>Kategori Makanan</th>
+            <th>Harga</th>
+            <th>Kategori Minuman</th>
+            <th>Harga</th>
+        </tr>
+
+        <tr>
+            <td>Nasi Uduk + Telur</td>
+            <td>5K - 6K</td>
+            <td>Es Teh</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Nasi Kuning</td>
+            <td>5K</td>
+            <td>Es Jeruk</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Nasi Goreng</td>
+            <td>10K</td>
+            <td>Kopi Hitam</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Mie Instan / Spesial + Telur</td>
+            <td>10K</td>
+            <td>Kopi Susu</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Ayam Goreng + Nasi</td>
+            <td>10K</td>
+            <td>Teh Tarik</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Ayam Geprek</td>
+            <td>10K</td>
+            <td>Milo Es/Hangat</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Seblak</td>
+            <td>12K</td>
+            <td>Es Coklat</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Nasi + Sosis/Nugget</td>
+            <td>12K</td>
+            <td>Es Susu</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Sandwich Telur/Ayam/Sosis</td>
+            <td>8K</td>
+            <td>Matcha Latte</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Burger Mini</td>
+            <td>6K</td>
+            <td>Milk Tea</td>
+            <td>5K</td>
+        </tr>
+
+        <tr>
+            <td>Sosis Bakar</td>
+            <td>8K</td>
+            <td>Nutrisari</td>
+            <td>3K</td>
+        </tr>
+
+        <tr>
+            <td>Kentang Goreng</td>
+            <td>10K</td>
+            <td>Air Mineral</td>
+            <td>3K</td>
+        </tr>
+
+    </table>
+</section>
+
+<!-- GALERI -->
+
+<h1>Galeri Menu</h1>
+
+<section class="gallery">
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/c5/6a/ca/c56acabe0c71e3e492129196b239133e.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/c5/6a/ca/c56acabe0c71e3e492129196b239133e.jpg" alt="Aneka Makanan Kekinian">
+        </a>
+        <figcaption>Aneka Minuman Kekinian</figcaption>
+    </figure>
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/0a/7c/27/0a7c27f56aa886c3451e4cf97bc37e57.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/0a/7c/27/0a7c27f56aa886c3451e4cf97bc37e57.jpg" alt="Minuman Segar">
+        </a>
+        <figcaption>Minuman Segar</figcaption>
+    </figure>
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/68/79/35/68793579baff1601c623e01b4ad994a3.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/68/79/35/68793579baff1601c623e01b4ad994a3.jpg" alt="Makanan Lokal">
+        </a>
+        <figcaption>Aneka Makanan Kekinian</figcaption>
+    </figure>
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/38/9c/04/389c0424778f3e3f0ebaf0f118f87718.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/38/9c/04/389c0424778f3e3f0ebaf0f118f87718.jpg" alt="Suasana Cafe">
+        </a>
+        <figcaption>Aneka Makanan Lokal</figcaption>
+    </figure>
+
+    <figure>
+        <a href="https://i.pinimg.com/736x/8d/a0/d6/8da0d650a53456c2d461ea0f3f8a7228.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/8d/a0/d6/8da0d650a53456c2d461ea0f3f8a7228.jpg" alt="Suasana Cafe">
+        </a>
+        <figcaption>BreakFast</figcaption>
+
+</section>
+
+<!-- FORMULIR -->
+
+<h1>Informasi Pemesanan / Reservasi</h1>
+
+<form action="/kirim.js">
+    <fieldset>
+        <legend><h1>Form Reservasi</h1></legend>
+        <div class="form-group">
+            <label for="nama">Nama Pemesan:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email">
+        </div>
+
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+            <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+        </div>
+    </div>
+
+        <div class="form-group">
+            <label for="waktu">Tanggal dan Waktu Kunjungan:</label>
+            <input type="datetime-local" name="waktu" id="waktu">
+        </div>
+
+        <div class="form-group">
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" pattern="[0-9]{10,13}" placeholder="Masukkan No.Hp">
+        </div>
+
+        <div class="form-group">
+            <label>Pilihan Tempat Duduk:</label>
+            <div class="radio-group">
+                <div class="inline-group">
+                    <input type="radio" id="indoor" name="tempat" value="indoor">
+                    <label for="indoor">Indoor</label>
+                </div>
+                <div class="inline-group">
+                    <input type="radio" id="outdoor" name="tempat" value="outdoor">
+                    <label for="outdoor">Outdoor</label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend><h1>Pesanan Utama</h1></legend>
+
+        <div class="form-group">
+            <label>Pilih Kategori Pesanan:</label>
+            <div class="checkbox-group">                
+                <div>
+                    <input type="checkbox" name="menu" id="menu-matcha" value="Matcha">
+                    <label for="menu-matcha">BreakFast</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="menu" id="menu-nasduk" value="Nasi Uduk">
+                    <label for="menu-nasduk">Makanan Kekinian</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="menu" id="menu-goreng" value="Nasi Goreng">
+                    <label for="menu-goreng">Makanan Lokal</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="menu" id="menu-seblak" value="Seblak">
+                    <label for="menu-seblak">Minuman Kekinian</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="menu" id="menu-kopi" value="Kopi Susu">
+                    <label for="menu-kopi">Minuman Segar</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gambar">Upload Bukti Transaksi / Catatan:</label>
+            <input type="file" name="gambar" id="gambar" accept="image/*">
+        </div>
+
+        <h2>Catatan Tambahan</h2>
+        <div class="form-group">
+            <textarea rows="5" cols="40" placeholder="Tuliskan catatan tambahan seperti request khusus..."></textarea>
+        </div>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+    </fieldset>
+</form>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sudut Nongkrong by Dhita</p>
+</footer>
+
+</body>
+</html>
